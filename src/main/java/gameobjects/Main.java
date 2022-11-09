@@ -13,10 +13,7 @@ import static gameobjects.Parse.runCommand;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-       Vector<Room> map = new Vector<Room>();
-        map.add(new Room1("Dungean", "This is a dark place!", -1,2,-1,-1));
-        map.add(new Room1("Cave", "Darkness own home", -1,-1,0,-1));
-        map.add(new Room2("Forest", "Here the wild animals and trees traverse", 0,-1,-1,3));
+
         BufferedReader in;
         String input;
         String output = "";

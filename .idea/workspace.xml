@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="Room. Thing, Map class updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Parse.java" afterDir="false" />
+    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="Added parse class and actor class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/direction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Room1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Room1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Thing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Thing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +23,7 @@
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -73,8 +73,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.gameobjects.Main">
-    <configuration name="Map" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gameobjects.Map" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gameobjects.Main" />
       <module name="Game" />
       <extension name="coverage">
         <pattern>
@@ -86,8 +86,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gameobjects.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gameobjects.Main" />
+    <configuration name="gameobjects.Map" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gameobjects.Map" />
       <module name="Game" />
       <extension name="coverage">
         <pattern>
@@ -102,7 +102,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.gameobjects.Main" />
-        <item itemvalue="Application.Map" />
+        <item itemvalue="Application.gameobjects.Map" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667958664090</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added parse class and actor class">
+      <created>1667992691610</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667992691610</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +160,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Room, Map, Player class created" />
     <MESSAGE value="Room. Thing, Map class updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Room. Thing, Map class updated" />
+    <MESSAGE value="Added parse class and actor class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added parse class and actor class" />
   </component>
 </project>
