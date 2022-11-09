@@ -3,13 +3,13 @@ public abstract class Room extends Thing {
     protected int n,s,w,e;
         Room(String nm, String descr, int north, int south, int west, int east) {
             super(nm, descr);
-        n = north;
-        s = south;
-        w = west;
-        e = east;
+        this.n = north;
+        this.s = south;
+        this.w = west;
+        this.e = east;
         };
 public void setN(int north) {
-        n = north;
+        this.n = north;
         }
 
 public int getN() {
@@ -17,15 +17,15 @@ public int getN() {
         }
 
 public void setS(int south) {
-        s = south;
+        this.s = south;
         }
 
 public void setW(int west) {
-        w = west;
+        this.w = west;
         }
 
 public void setE(int east) {
-        e = east;
+        this.e = east;
         }
 
 public int getS() {
