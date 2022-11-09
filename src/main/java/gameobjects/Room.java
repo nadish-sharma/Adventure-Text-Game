@@ -1,8 +1,8 @@
 package gameobjects;
 public abstract class Room extends Thing {
-    int n,s,w,e;
+    protected int n,s,w,e;
         Room(String nm, String descr, int north, int south, int west, int east) {
-        Thing(nm, descr);
+            super(nm, descr);
         n = north;
         s = south;
         w = west;

@@ -1,12 +1,8 @@
 package gameobjects;
 
 public abstract class Thing {
-    String name;
-    String description;
-
-    public Thing() {
-
-    }
+    protected String name;
+    protected String description;
 
     String getName() {
         return name;
