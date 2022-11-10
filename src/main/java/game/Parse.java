@@ -1,10 +1,14 @@
-package gameobjects;
+package game;
 
+import gameobjects.Main;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Parse {
+
     //Method to split an input string into a list of words using regular expression
     public static List<String> wordList(String input) {
         String delims = "[ \t,.:;?!\"']+";
@@ -18,20 +22,38 @@ public class Parse {
     }
     //Categorises a word list into allowed nouns and verbs
     private static void parseCommand(List<String> wordlist) {
-        String verb, noun;
+        String verb;
         List<String> commands = new ArrayList<>(Arrays.asList("take", "drop", "n", "s", "w", "e"));
         List<String> objects = new ArrayList<>(Arrays.asList("sword", "ring", "snake"));
-        if(wordlist.size() != 2) {
-            System.out.println("Only 2 words are allowed");
+        if(wordlist.size() != 1) {
+            System.out.println("Maximum 2 words are allowed");
         } else {
             verb = wordlist.get(0);
-            noun = wordlist.get(1);
+            //noun = wordlist.get(1);
             if(!commands.contains(verb)) {
                 System.out.println(verb + " is not a known verb");
+            } else {
+                switch (verb) {
+                    case "n":
+                        Game.goN();
+                        break;
+                    case "s":
+                        Game.goS();
+                        break;
+                    case "w":
+                        Game.goW();
+                        break;
+                    case "e":
+                        Game.goE();
+                        break;
+                }
             }
-            if(!objects.contains(noun)) {
+          /*  if(!objects.contains(noun)) {
                 System.out.println(noun + " is not a known noun");
             }
+
+           */
+
         }
     }
     //Method to convert the input string to lower case and trim it

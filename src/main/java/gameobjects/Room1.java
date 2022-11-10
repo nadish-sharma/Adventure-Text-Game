@@ -1,10 +1,9 @@
 package gameobjects;
 
-import java.awt.*;
-import java.util.Vector;
+import enums.rl;
 
 public class Room1 extends Room {
-    Room1(String nm, String descr, int north, int south, int west, int east) {
+    public Room1(String nm, String descr, rl north, rl south, rl west, rl east) {
         super(nm, descr, north, south, west, east);
     }
 

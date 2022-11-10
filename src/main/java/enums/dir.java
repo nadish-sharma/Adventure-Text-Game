@@ -1,4 +1,4 @@
-package gameobjects;
+package enums;
 
 public enum dir {
     NORTH,
