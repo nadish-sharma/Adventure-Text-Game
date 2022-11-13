@@ -1,10 +1,22 @@
 package gameobjects;
 
-public abstract class Thing {
+public class Thing {
     protected String name;
     protected String description;
+    protected  boolean canTake;
+    public Thing(String nm, String descr) {
+        name = nm;
+        description = descr;
+        canTake = true;
+    };
 
-   public String getName() {
+    public Thing(String nm, String descr, boolean aCanTake) {
+        name = nm;
+        description = descr;
+        canTake = aCanTake;
+    }
+
+    public String getName() {
         return name;
     }
 
@@ -19,8 +31,5 @@ public abstract class Thing {
         description = descr;
     }
     */
-    Thing(String nm, String descr) {
-        name = nm;
-        description = descr;
-    };
+
 }

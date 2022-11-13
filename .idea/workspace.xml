@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/ThingList.java" afterDir="false" />
+    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="Added ThingHolder and ThingList class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Room1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Room1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Room2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Room2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Thing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Thing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/ThingHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/ThingHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/ThingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/ThingList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668056309403</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added ThingHolder and ThingList class">
+      <created>1668058823258</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668058823258</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,7 +202,8 @@
     <MESSAGE value="Added parse class and actor class" />
     <MESSAGE value="dir enum created, Game class updated" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Added ThingHolder and ThingList class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ThingHolder and ThingList class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,6 +2,7 @@ package gameobjects;
 
 public abstract class Items extends Thing{
     protected boolean canTake;
+    protected int healthEffect;
 
     public boolean getCanTake() {
         return canTake;
@@ -20,4 +21,10 @@ public abstract class Items extends Thing{
         super(nm, descr);
         canTake = aCanTake;
     }
+    Items(String nm, String descr, boolean aCanTake, int ahealthEffect) {
+        super(nm, descr);
+        canTake = aCanTake;
+        healthEffect = ahealthEffect;
+    }
+
 }

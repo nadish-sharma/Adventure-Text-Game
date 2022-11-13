@@ -2,10 +2,17 @@ package gameobjects;
 
 import enums.rl;
 
-public abstract class Room extends Thing {
+public abstract class Room extends ThingHolder {
     protected rl n,s,w,e;
-        Room(String nm, String descr, rl north, rl south, rl west, rl east) {
-            super(nm, descr);
+    Room(String nm, String descr, rl north, rl south, rl west, rl east, ThingList tl) {
+        super(nm, descr, tl);
+        this.n = north;
+        this.s = south;
+        this.w = west;
+        this.e = east;
+    };
+        Room(String nm, String descr, rl north, rl south, rl west, rl east, boolean tak ,ThingList tl) {
+            super(nm, descr, tak, tl);
         this.n = north;
         this.s = south;
         this.w = west;

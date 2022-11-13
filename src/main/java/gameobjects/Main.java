@@ -9,7 +9,10 @@ import java.io.InputStreamReader;
 
 import static game.Parse.runCommand;
 
-public class Main {
+public class Main extends Game{
+    public Main() throws IOException {
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader in;
         String input;
@@ -22,6 +25,7 @@ public class Main {
             output = Parse.runCommand(input);
             System.out.println("You entered '" + input + "'");
             System.out.println(output);
+            //System.out.println(map.get());
             //System.out.println((map.elementAt(Integer.parseInt(input))).getDescription());
         } while (!("exit".equals(input)));
 

@@ -2,8 +2,18 @@ package gameobjects;
 
 import java.util.Vector;
 
-public class ThingList extends Vector<Thing> {
-    public String describeThings() {
+public class ThingList extends Vector<Thing> implements java.io.Serializable {
+    protected Vector<Thing> thingList = new Vector<Thing>();
+
+    public Vector<Thing> getThingList() {
+        return thingList;
+    }
+
+  public ThingList() {
+  }
+
+    String describeThings() {
+
         String s = "";
         if(this.size() == 0) {
             s = "empty\n";
@@ -15,6 +25,7 @@ public class ThingList extends Vector<Thing> {
         return s;
     }
     public Thing giveThisObject(String nm) {
+
         Thing thing = null;
         String thingName = "";
         String lowcase = nm.trim().toLowerCase();
@@ -25,5 +36,14 @@ public class ThingList extends Vector<Thing> {
             }
         }
         return thing;
+
     }
+    public void addThing(Thing thing) {
+        thingList.add(thing);
+    }
+
+   public void addRange(ThingList tl) {
+        thingList.addAll(tl);
+    }
+
 }
