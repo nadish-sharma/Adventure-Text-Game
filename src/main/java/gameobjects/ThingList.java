@@ -3,7 +3,7 @@ package gameobjects;
 import java.util.Vector;
 
 public class ThingList extends Vector<Thing> implements java.io.Serializable {
-    protected Vector<Thing> thingList = new Vector<Thing>();
+    public Vector<Thing> thingList = new Vector<Thing>();
 
     public Vector<Thing> getThingList() {
         return thingList;
@@ -38,9 +38,9 @@ public class ThingList extends Vector<Thing> implements java.io.Serializable {
         return thing;
 
     }
-    public void addThing(Thing thing) {
+   /* public void addThing(Thing thing) {
         thingList.add(thing);
-    }
+    } */
 
    public void addRange(ThingList tl) {
         thingList.addAll(tl);

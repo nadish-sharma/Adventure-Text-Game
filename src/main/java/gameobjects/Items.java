@@ -1,8 +1,12 @@
 package gameobjects;
 
-public abstract class Items extends Thing{
+public class Items extends Thing{
     protected boolean canTake;
     protected int healthEffect;
+
+    public Items(String nm, String descr) {
+        super(nm, descr);
+    }
 
     public boolean getCanTake() {
         return canTake;
@@ -12,19 +16,17 @@ public abstract class Items extends Thing{
         this.canTake = canTake;
     }
     // standard constructor which uses canTake variable with default value true
-    Items(String nm, String descr) {
+    Items(String nm, String descr, int aHealthEffect) {
         super(nm, descr);
-        canTake = true;
+        healthEffect = aHealthEffect;
     }
     // alternative constructor
-    Items(String nm, String descr, boolean aCanTake) {
+    Items(String nm, String descr, boolean aCanTake, int aHealthEffect) {
         super(nm, descr);
         canTake = aCanTake;
+        healthEffect = aHealthEffect;
     }
-    Items(String nm, String descr, boolean aCanTake, int ahealthEffect) {
-        super(nm, descr);
-        canTake = aCanTake;
-        healthEffect = ahealthEffect;
+    public int getHealthEffect() {
+        return healthEffect;
     }
-
 }

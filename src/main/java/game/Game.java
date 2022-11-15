@@ -44,19 +44,21 @@ public class Game {
           ThingList room8List = new ThingList();
 
           // add items to each room's list
-          room0List.addThing(new Thing("Spinach","A leafy vegetable to increase arm strength"));
-          room0List.addThing(new Thing("Spinach","A leafy vegetable to increase arm strength"));
-          room1List.addThing(new Thing("Mahagony", "A mighty tree of the mountains", false));
-          room2List.addThing(new Thing("Mango","The king of fruits is citrus in taste"));
-          room4List.addThing(new Thing("Spinach","A leafy vegetable to increase arm strength"));
-          room0List.addThing(new Thing("Spinach","A leafy vegetable to increase arm strength"));
-          room1List.addThing(new Thing("Mahagony", "A mighty tree of the mountains", false));
-          room2List.addThing(new Thing("Mango","The king of fruits is citrus in taste"));
-          room4List.addThing(new Thing("Spinach","A leafy vegetable to increase arm strength"));
-          room0List.addThing(new Thing("Spinach","A leafy vegetable to increase arm strength"));
-          room1List.addThing(new Thing("Mahagony", "A mighty tree of the mountains", false));
-          room2List.addThing(new Thing("Mango","The king of fruits is citrus in taste"));
-          room4List.addThing(new Thing("Spinach","A leafy vegetable to increase arm strength"));
+          room0List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));
+          room0List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));
+          room1List.add(new Items("Mahagony", "A mighty tree of the mountains"));
+          room2List.add(new Items("Mango", "The king of fruits is citrus in taste"));
+          room3List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));
+          room4List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));
+          room0List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));
+          room1List.add(new Items("Mahagony", "A mighty tree of the mountains"));
+          room2List.add(new Items("Mango", "The king of fruits is citrus in taste"));
+          room3List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));
+          room4List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));room0List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));
+          room1List.add(new Items("Mahagony", "A mighty tree of the mountains"));
+          room2List.add(new Items("Mango", "The king of fruits is citrus in taste"));
+          room3List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));
+          room4List.add(new Items("Spinach", "A leafy vegetable to increase arm strength"));
 
           // add various rooms to a map
           room0 = new Room1("Dungean", "This is a dark place!", NOEXIT, ROOM1, NOEXIT, NOEXIT, room0List);
@@ -79,6 +81,7 @@ public class Game {
           this.map.put(ROOM6,room6);
           this.map.put(ROOM7,room7);
           this.map.put(ROOM8,room8);
+
           System.out.println(room0List.size());
      }
      private void startGame() throws IOException {
@@ -128,7 +131,8 @@ public class Game {
           movePlayer(map.get(player.getLoc()).getN());
      }
 
-     public static void goS() { movePlayer(map.get(player.getLoc()).getS()); }
+     public static void goS() {
+          movePlayer(map.get(player.getLoc()).getS()); }
 
      public static void goW() {
           movePlayer(map.get(player.getLoc()).getW());
