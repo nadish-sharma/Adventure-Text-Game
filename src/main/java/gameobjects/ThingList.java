@@ -24,18 +24,18 @@ public class ThingList extends Vector<Thing> implements java.io.Serializable {
         }
         return s;
     }
-    public Thing giveThisObject(String nm) {
+    public Thing returnThisObject(String nm) {
 
-        Thing thing = null;
+        Thing athing = null;
         String thingName = "";
         String lowcase = nm.trim().toLowerCase();
         for(Thing t : this) {
             thingName = t.getName().trim().toLowerCase();
             if(thingName.equals(lowcase)) {
-                thing = t;
+                athing = t;
             }
         }
-        return thing;
+        return athing;
 
     }
    /* public void addThing(Thing thing) {

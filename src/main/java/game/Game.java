@@ -141,4 +141,40 @@ public class Game {
      public static void goE() {
           movePlayer(map.get(player.getLoc()).getE());
      }
+     private void transferOb(Thing t, ThingList fromlist, ThingList tolist) {
+          fromlist.remove(t);
+          tolist.add(t);
+     }
+     public String takeObject(String obname) {
+          String retStr = "";
+          Thing t = map.get(player.getLoc()).getThings().returnThisObject(obname);
+
+          if (obname.equals("")) {
+               obname = "nameless object"; // if no object specified
+          }
+          if (t == null) {
+               retStr = "There is no " + obname + " here!";
+          } else {
+               transferOb(t, map.get(player.getLoc()).getThings(), player.getThings());
+               retStr = obname + " taken!";
+          }
+          return retStr;
+     }
+
+     String dropOb(String obname) {
+          String retStr = "";
+          Thing t = player.getThings().returnThisObject(obname);
+
+          if (obname.equals("")) {
+               retStr = "You'll have to tell me which object you want to drop!"; // if no object specified
+          } else if (t == null) {
+               retStr = "You haven't got one of those!";
+          } else {
+               transferOb(t, player.getThings(), map.get(player.getLoc()).getThings());
+               retStr = obname + " dropped!";
+          }
+          return retStr;
+     }
+
+
 }

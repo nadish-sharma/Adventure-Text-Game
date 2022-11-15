@@ -5,14 +5,6 @@ import enums.rl;
 public class Actor extends ThingHolder{
     private int health;
 
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
     private rl loc; //Room where the actor is present
     public Actor(String nm, String descr, rl roomName, boolean tak ,ThingList tl) {
         super(nm, descr, tak, tl);
@@ -32,5 +24,12 @@ public class Actor extends ThingHolder{
     }
     public rl getLoc() {
         return loc;
+    }
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 }
