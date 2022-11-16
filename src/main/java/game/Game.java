@@ -32,11 +32,11 @@ public class Game {
 
      private void createGame() {
           //create a vector to store enemies in each room
-          Vector<Actor> room0EnemyList = new Vector<Actor>();
-          Vector<Actor> room2EnemyList = new Vector<Actor>();
-          Vector<Actor> room3EnemyList = new Vector<Actor>();
-          Vector<Actor> room4EnemyList = new Vector<Actor>();
-          Vector<Actor> room5EnemyList = new Vector<Actor>();
+          Vector<Actor> room0EnemyList = new Vector<>();
+          Vector<Actor> room2EnemyList = new Vector<>();
+          Vector<Actor> room3EnemyList = new Vector<>();
+          Vector<Actor> room4EnemyList = new Vector<>();
+          Vector<Actor> room5EnemyList = new Vector<>();
 
           //Add enemy to each room's enemy vector, some rooms have no enemies
           room0EnemyList.add(new Actor("Jacosta the Ghosta", "I shall annihilate all who stand in my ghostly path!",
@@ -88,12 +88,12 @@ public class Game {
           room5 = new KingsmeadRoom("Kingsmead", "Majin Buu from DBZ the final boss? Don't make me a candy Buu Huu", NOEXIT, NOEXIT, NOEXIT, NOEXIT, room5List, room5EnemyList);
 
           // add rooms to the hashmap map with key as enums from rl file
-          this.map.put(ROOM0,room0);
-          this.map.put(ROOM1,room1);
-          this.map.put(ROOM2,room2);
-          this.map.put(ROOM3,room3);
-          this.map.put(ROOM4,room4);
-          this.map.put(ROOM5,room5);
+          map.put(ROOM0,room0);
+          map.put(ROOM1,room1);
+          map.put(ROOM2,room2);
+          map.put(ROOM3,room3);
+          map.put(ROOM4,room4);
+          map.put(ROOM5,room5);
           System.out.println(room0List.size());
      }
      private void startGame() throws IOException {
@@ -127,8 +127,6 @@ public class Game {
           } else {
                player.setLoc(newPosition);
                look();
-               userInput();
-             //  System.out.println("You are in room: " + player.getLoc().getName());
           }
      }
      public static void goN() {
@@ -159,7 +157,7 @@ public class Game {
           if (t == null) {
                retStr = "There is no " + obname + " here!";
           } else {
-               int newHealth = 0;
+               int newHealth;
                newHealth = player.getHealth() + (t).gethealthThingEffect();
                player.setHealth(newHealth);
                transferObject(t, map.get(player.getLoc()).getThings(), player.getThings());
