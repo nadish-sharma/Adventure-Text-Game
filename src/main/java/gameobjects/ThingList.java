@@ -11,7 +11,6 @@ public class ThingList extends Vector<Thing> implements java.io.Serializable {
 
   public ThingList() {
   }
-
     String describeThings() {
 
         String s = "";
@@ -36,8 +35,8 @@ public class ThingList extends Vector<Thing> implements java.io.Serializable {
             }
         }
         return athing;
-
     }
+
    /* public void addThing(Thing thing) {
         thingList.add(thing);
     } */

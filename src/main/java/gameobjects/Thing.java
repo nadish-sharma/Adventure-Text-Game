@@ -4,6 +4,22 @@ public class Thing {
     protected String name;
     protected String description;
     protected  boolean canTake;
+    protected int effect;
+
+    public int getEffect() {
+        return effect;
+    }
+
+    public void setEffect(int effect) {
+        this.effect = effect;
+    }
+
+    public Thing(String nm, String descr, int effect) {
+        name = nm;
+        description = descr;
+        canTake = true;
+        this.effect = effect;
+    };
     public Thing(String nm, String descr) {
         name = nm;
         description = descr;

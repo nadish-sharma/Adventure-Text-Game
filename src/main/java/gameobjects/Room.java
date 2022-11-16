@@ -2,8 +2,11 @@ package gameobjects;
 
 import enums.rl;
 
+import java.util.Vector;
+
 public abstract class Room extends ThingHolder {
     protected rl n,s,w,e;
+
     Room(String nm, String descr, rl north, rl south, rl west, rl east, ThingList tl) {
         super(nm, descr, tl);
         this.n = north;
@@ -11,7 +14,7 @@ public abstract class Room extends ThingHolder {
         this.w = west;
         this.e = east;
     };
-        Room(String nm, String descr, rl north, rl south, rl west, rl east, boolean tak ,ThingList tl) {
+        Room(String nm, String descr, rl north, rl south, rl west, rl east, boolean tak ,ThingList tl, Vector<Actor> enemy) {
             super(nm, descr, tak, tl);
         this.n = north;
         this.s = south;
@@ -47,4 +50,5 @@ public rl getW() {
 public rl getE() {
         return e;
         }
+    public abstract Vector<Actor> getActor();
 }

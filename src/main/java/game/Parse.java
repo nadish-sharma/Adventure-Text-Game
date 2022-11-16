@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static game.Game.useObject;
+
 public class Parse {
 
     //Method to split an input string into a list of words using regular expression
@@ -15,25 +17,36 @@ public class Parse {
         List<String> strlist = new ArrayList<>();
         String[] words = input.split(delims);
         for (String word : words) {
-            strlist.add(word); {
-            }
+            strlist.add(word);
         }
         return strlist;
     }
     //Categorises a word list into allowed nouns and verbs
     private static void parseCommand(List<String> wordlist) {
         String verb;
-        List<String> commands = new ArrayList<>(Arrays.asList("take", "drop", "n", "s", "w", "e"));
-        List<String> objects = new ArrayList<>(Arrays.asList("sword", "ring", "snake"));
-        if(wordlist.size() != 1) {
+        String noun = "";
+        List<String> commands = new ArrayList<>(Arrays.asList("take", "drop", "n", "s", "w", "e","use", "talk"));
+        List<String> obj = new ArrayList<>(Arrays.asList("Sword", "Potion", "Fang", "Spear", "Orange", "Plasma"));
+        if(!(wordlist.size() > 0 && wordlist.size() <= 2)) {
             System.out.println("Maximum 2 words are allowed");
         } else {
             verb = wordlist.get(0);
-            //noun = wordlist.get(1);
+            if(wordlist.size() == 2) {
+                noun = wordlist.get(1);
+            }
             if(!commands.contains(verb)) {
                 System.out.println(verb + " is not a known verb");
+            }
+            else if(obj.contains(noun)) {
+                System.out.println(noun + " is not a known noun");
             } else {
                 switch (verb) {
+                    case "take":
+                        System.out.println(Game.takeObject(noun));
+                        break;
+                    case "drop":
+                        System.out.println(Game.dropObject(noun));
+                        break;
                     case "n":
                         Game.goN();
                         break;
@@ -45,6 +58,11 @@ public class Parse {
                         break;
                     case "e":
                         Game.goE();
+                        break;
+                    case "use":
+                        useObject(noun);
+                        break;
+                    case "talk":
                         break;
                 }
             }
