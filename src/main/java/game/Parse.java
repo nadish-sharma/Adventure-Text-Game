@@ -66,11 +66,6 @@ public class Parse {
                         break;
                 }
             }
-          /*  if(!objects.contains(noun)) {
-                System.out.println(noun + " is not a known noun");
-            }
-
-           */
 
         }
     }

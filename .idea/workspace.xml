@@ -4,28 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/AsceticRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/CaveRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/DungeanRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/ElfRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/ForestRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/KingsmeadRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/MagicItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameobjects/WeaponItem.java" afterDir="false" />
+    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="Added rooms for the game and usable items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Parse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Parse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Room1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Room2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Enemy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Items.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/MagicItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Thing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Thing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/ThingHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/ThingHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/ThingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/ThingList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Room1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Room1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/WeaponItem.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668496366627</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added rooms for the game and usable items">
+      <created>1668636838488</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668636838488</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,7 +232,8 @@
     <MESSAGE value="Added items to each room. Created Thingholder, ThingList class" />
     <MESSAGE value="items class defined, items are able to be added to rooms" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Added rooms for the game and usable items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rooms for the game and usable items" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,21 +4,31 @@ public class Thing {
     protected String name;
     protected String description;
     protected  boolean canTake;
-    protected int effect;
+    protected int healthThingEffect;
+    protected int attackThingEffect;
 
-    public int getEffect() {
-        return effect;
+    public int getAttackThingEffect() {
+        return attackThingEffect;
     }
 
-    public void setEffect(int effect) {
-        this.effect = effect;
+    public void setAttackThingEffect(int attackThingEffect) {
+        this.attackThingEffect = attackThingEffect;
     }
 
-    public Thing(String nm, String descr, int effect) {
+    public int gethealthThingEffect() {
+        return healthThingEffect;
+    }
+
+    public void sethealthThingEffect(int healthThingEffect) {
+        this.healthThingEffect = healthThingEffect;
+    }
+
+    public Thing(String nm, String descr, int healthThingEffect, int attackThingEffect) {
         name = nm;
         description = descr;
         canTake = true;
-        this.effect = effect;
+        this.healthThingEffect = healthThingEffect;
+        this.attackThingEffect = attackThingEffect;
     };
     public Thing(String nm, String descr) {
         name = nm;

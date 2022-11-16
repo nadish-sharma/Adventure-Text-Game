@@ -17,18 +17,21 @@ public class Main extends Game{
         BufferedReader in;
         String input;
         String output = "";
-        Game game = new Game();
+
+
+        new Game();
+        System.out.println("What do you want to do?");
         in = new BufferedReader(new InputStreamReader(System.in));
         do {
             System.out.println("> ");
-            input = in.readLine();
+            try {
+                input = in.readLine();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             output = Parse.runCommand(input);
-            System.out.println("You entered '" + input + "'");
             System.out.println(output);
-            //System.out.println(map.get());
-            //System.out.println((map.elementAt(Integer.parseInt(input))).getDescription());
-        } while (!("exit".equals(input)));
-
+        } while(!("q".equals(input)));
 
     }
 }
