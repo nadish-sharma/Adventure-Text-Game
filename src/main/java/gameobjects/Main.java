@@ -17,10 +17,9 @@ public class Main extends Game{
         BufferedReader in;
         String input;
         String output = "";
-
-
-        new Game();
-        System.out.println("What do you want to do?");
+        Game game = new Game();
+        String playerName = game.getPlayer().getName();
+        System.out.println("What do you want to do " + playerName + " ?");
         in = new BufferedReader(new InputStreamReader(System.in));
         do {
             System.out.println("> ");
@@ -31,7 +30,7 @@ public class Main extends Game{
             }
             output = Parse.runCommand(input);
             System.out.println(output);
-        } while(!("q".equals(input)));
+        } while(!("q".equals(input)) && game.getPlayer().getHealth() > 0);
 
     }
 }

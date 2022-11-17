@@ -30,7 +30,13 @@ public class ThingHolder extends Thing {
 
 
     public String describe() {
-        return "Name : " + this.name + "\nDescription : " + this.description + "\nIt contains : " + getThings().describeThings();
+        return "--------------------"+this.name+"--------------------" +
+                "\n"+ this.description + "\nLook! some mystical items are here for you to take:\n"
+                + getThings().describeThings();
+    }
+    public String describeItems() {
+        return "Look! some mystical items are here for you to take:\n"
+                + getThings().describeThings();
     }
     public void setThings(ThingList things) {
         this.things = things;
@@ -39,4 +45,7 @@ public class ThingHolder extends Thing {
         return things;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 }

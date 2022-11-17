@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static game.Game.getCurrentRoom;
 import static game.Game.useObject;
 
 public class Parse {
@@ -25,8 +26,8 @@ public class Parse {
     private static void parseCommand(List<String> wordlist) {
         String verb;
         String noun = "";
-        List<String> commands = new ArrayList<>(Arrays.asList("take", "drop", "n", "s", "w", "e","use", "talk"));
-        List<String> obj = new ArrayList<>(Arrays.asList("Sword", "Potion", "Fang", "Spear", "Orange", "Plasma"));
+        List<String> commands = new ArrayList<>(Arrays.asList("take", "drop", "n", "s", "w", "e","use", "retreat"));
+        List<String> obj = new ArrayList<>(Arrays.asList("Sword", "Potion", "Fang", "Spear", "Orange", "Apple", "Plasma"));
         if(!(wordlist.size() > 0 && wordlist.size() <= 2)) {
             System.out.println("Maximum 2 words are allowed");
         } else {
@@ -42,10 +43,10 @@ public class Parse {
             } else {
                 switch (verb) {
                     case "take":
-                        System.out.println(Game.takeObject(noun));
+                        Game.takeObject(noun);
                         break;
                     case "drop":
-                        System.out.println(Game.dropObject(noun));
+                        Game.dropObject(noun);
                         break;
                     case "n":
                         Game.goN();
@@ -62,8 +63,8 @@ public class Parse {
                     case "use":
                         useObject(noun);
                         break;
-                    case "talk":
-                        break;
+                    case "retreat":
+                        Game.movePlayer(getCurrentRoom().getPreviousRoom());
                 }
             }
 
