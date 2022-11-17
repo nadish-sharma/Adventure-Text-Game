@@ -27,21 +27,6 @@ public abstract class Room extends ThingHolder {
         this.w = west;
         this.e = east;
         };
-public void setN(rl north) {
-        this.n = north;
-        }
-
-public void setS(rl south) {
-        this.s = south;
-        }
-
-public void setW(rl west) {
-        this.w = west;
-        }
-
-public void setE(rl east) {
-        this.e = east;
-        }
     public rl getN() {
         return n;
     }

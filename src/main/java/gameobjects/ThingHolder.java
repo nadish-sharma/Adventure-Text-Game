@@ -7,21 +7,18 @@ import enums.rl;
 public class ThingHolder extends Thing {
     protected Enum<rl> room;
     protected ThingList things = new ThingList();
-    protected Actor enemy;
     public ThingHolder(String nm, String descr, rl roomName) {
         super(nm, descr);
         this.room = roomName;
     }
+    public ThingHolder(String nm, String descr, rl roomName, ThingList tl) {
+        super(nm, descr);
+        this.room = roomName;
+        this.things = tl;
+    }
     public ThingHolder(String nm, String descr, ThingList tl) {
         super(nm, descr);
         this.things = tl;
-    }
-
-    ThingHolder(String nm, String descr, ThingList tl, Actor enemyList) {
-        super(nm, descr);
-        things = tl;
-        enemy = enemyList;
-       // things.addRange(tl);
     }
     ThingHolder(String nm, String descr, boolean aCanTake, ThingList tl) {
         super(nm, descr, aCanTake);
@@ -37,9 +34,6 @@ public class ThingHolder extends Thing {
     public String describeItems() {
         return "Look! some mystical items are here for you to take:\n"
                 + getThings().describeThings();
-    }
-    public void setThings(ThingList things) {
-        this.things = things;
     }
     public ThingList getThings() {
         return things;

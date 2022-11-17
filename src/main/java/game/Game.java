@@ -27,7 +27,7 @@ public class Game {
           // create a game with rooms, items, and enemies added to the map
           createGame();
           // initially player's inventory is empty
-          player = new Actor("Nadish", "A description of player", ROOM0, new ThingList(), 100, 15, 5);
+          player = new Actor("Nadish", "A description of player", ROOM0, new ThingList(), 100, 5);
           startGame();
      }
      private static void clearWholeScreen() {
@@ -336,7 +336,7 @@ public class Game {
                               roomEnemy.get(0).setHealth(0);
                               if(getLastActorHealth() <= 0) {
                                    System.out.println("Congratulations " + player.getName() +
-                                           "You won the adventure Game!");
+                                           " You won the adventure Game!");
                               }
                               else {
                                    System.out.println(player.getName() + "your health is : " + player.getHealth());

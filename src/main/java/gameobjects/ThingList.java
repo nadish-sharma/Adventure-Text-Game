@@ -5,10 +5,6 @@ import java.util.Vector;
 public class ThingList extends Vector<Thing> implements java.io.Serializable {
     public Vector<Thing> thingList = new Vector<Thing>();
 
-    public Vector<Thing> getThingList() {
-        return thingList;
-    }
-
   public ThingList() {
   }
     String describeThings() {
@@ -36,11 +32,6 @@ public class ThingList extends Vector<Thing> implements java.io.Serializable {
         }
         return athing;
     }
-
-   /* public void addThing(Thing thing) {
-        thingList.add(thing);
-    } */
-
    public void addRange(ThingList tl) {
         thingList.addAll(tl);
     }
