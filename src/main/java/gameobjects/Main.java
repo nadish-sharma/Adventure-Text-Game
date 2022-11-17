@@ -16,7 +16,6 @@ public class Main extends Game{
     public static void main(String[] args) throws IOException {
         BufferedReader in;
         String input;
-        String output = "";
         Game game = new Game();
         String playerName = game.getPlayer().getName();
         System.out.println("What do you want to do " + playerName + " ?");
@@ -28,9 +27,8 @@ public class Main extends Game{
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            output = Parse.runCommand(input);
-            System.out.println(output);
-        } while(!("q".equals(input)) && game.getPlayer().getHealth() > 0);
+            Parse.runCommand(input);
+        } while(!("q".equals(input)) && game.getPlayer().getHealth() > 0 && game.getLastActorHealth() != 0);
 
     }
 }

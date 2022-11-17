@@ -13,7 +13,7 @@ import static enums.rl.*;
 import static java.lang.Thread.*;
 
 public class Game {
-     Room room0;
+     static Room room0;
      Room room1;
      Room room2;
      Room room3;
@@ -29,6 +29,14 @@ public class Game {
           // initially player's inventory is empty
           player = new Actor("Nadish", "A description of player", ROOM0, new ThingList(), 100, 15, 5);
           startGame();
+     }
+     private static void clearWholeScreen() {
+          System.out.print("\u000C"); //clears the screen
+          System.out.flush(); //moves the cursor to top left
+     }
+     private void clearScreenAfterCursor() {
+          System.out.print("\033[2J");
+          System.out.flush();
      }
 
      private void createGame() {
@@ -77,7 +85,7 @@ public class Game {
           room4List.add(new Thing("Apple", "Red sweet fruit with awesome healing properties ",
                   150, 0));
           room5List.add(new Thing("Candy", "Tastes weird but great for health",
-                  700, 0));
+                  800, 0));
           room5List.add(new Thing("Plasma", "A mysterious plasma gun from future which turns " +
                   "powerful beings to ashes", 0, 200));
 
@@ -121,6 +129,7 @@ public class Game {
           System.out.println("> ");
           name = in.readLine();
           player.setName(name);
+          clearWholeScreen();
           System.out.println("You start the game at " + map.get(player.getLoc()).getName());
           look();
           availableCommands();
@@ -138,6 +147,12 @@ public class Game {
           return map;
      }
 
+     public static boolean checkIfActorNotNull(Actor a) {
+          if(Objects.nonNull(a))
+               return true;
+          else
+               return false;
+     }
      public static Room getCurrentRoom() {
           return map.get(player.getLoc());
      }
@@ -166,33 +181,54 @@ public class Game {
      public static void movePlayer(rl newPosition) {
           // if roomNumber = NOEXIT, display a special message, otherwise
           // display text (e.g. name and description of room)
-
-          if (newPosition.equals(NOEXIT)) {
-               System.out.println("No Exit in this direction!");
-          } else {
-               player.setLoc(newPosition);
-               look();
+          if (Objects.nonNull(getCurrentActor())) {                   // runs if there is an enemy in room
+               if (getCurrentActor().getHealth() <= 0) {              // runs if the enemy is defeated
+                    if (newPosition.equals(NOEXIT)) {
+                         System.out.println("No Exit in this direction!");
+                    } else {
+                         player.setLoc(newPosition);                  // player location set to new location
+                         look();                                      // player looks in the new room
+                         availableCommands();
+                    }
+               } else {
+                    System.out.println("You can't escape without defeating the monster of this room");
+                    if (getCurrentRoom().getThings().size() == 0) {
+                         lookEnemy();
+                         availableCommands();
+                    } else {
+                         lookItems();
+                         availableCommands();
+                    }
+               }
+          }
+          else {                                                 // runs if there is no enemy in room
+               if (newPosition.equals(NOEXIT)) {
+                    System.out.println("No Exit in this direction!");
+               } else {
+                    player.setLoc(newPosition);        //sets the position of player to new location
+                    look();                            //player looks in the new room
+                    availableCommands();
+               }
           }
      }
 
      public static void goN() {
           movePlayer(getCurrentRoom().getN());
-          availableCommands();
      }
 
      public static void goS() {
           movePlayer(getCurrentRoom().getS());
-          availableCommands();
      }
 
      public static void goW() {
           movePlayer(getCurrentRoom().getW());
-          availableCommands();
      }
 
      public static void goE() {
           movePlayer(getCurrentRoom().getE());
-          availableCommands();
+     }
+     public static int getLastActorHealth() {
+          return (map.get(ROOM5)).getActor().get(0).getHealth();
      }
      public static void inventoryStatus() {
           System.out.println("\nYou have these items in inventory:");
@@ -218,29 +254,38 @@ public class Game {
           if (t == null) {
                System.out.println("There is no " + obname + " here!");
           } else {
-               int newHealth;
-               newHealth = player.getHealth() + (t).gethealthThingEffect();
-               player.setHealth(newHealth);
-               transferObject(t, getCurrentRoom().getThings(), player.getThings());
-               System.out.println(obname + " taken!\n" + player.getName() + " health : " + player.getHealth());
-               inventoryStatus();
-               System.out.println();
+                    int newHealth;
+                    newHealth = player.getHealth() + (t).gethealthThingEffect();
+                    player.setHealth(newHealth);
+                    transferObject(t, getCurrentRoom().getThings(), player.getThings());
+                    System.out.println(obname + " taken!\n" + player.getName() + " health : " + player.getHealth());
+                    inventoryStatus();
+                    System.out.println();
+
                if(Objects.nonNull(getCurrentActor())) {
                     try {
-                         sleep(3000);
+                         sleep(2000);
                     } catch (InterruptedException e) {
                          throw new RuntimeException(e);
                     }
-                    for(int i = 3; i >= 1; i--) {
-                         System.out.println(i);
-                         try {
-                              sleep(1000);
-                         } catch (InterruptedException e) {
-                              throw new RuntimeException(e);
+                    if(getCurrentRoom().getThings().size() == 0) {    //start countdown for enemy appearance
+                                                                      // if all objects of room are taken
+                         for (int i = 3; i >= 1; i--) {
+                              try {
+                                   sleep(1000);
+                                   System.out.println(i);
+                              } catch (InterruptedException e) {
+                                   throw new RuntimeException(e);
+                              }
                          }
+                         lookEnemy();
+                    } else {
+                         lookItems();
                     }
-               lookEnemy();
                } else {
+                    if(getCurrentRoom().getThings().size() != 0)
+                         lookItems();
+                    else
                          System.out.println("It seems there are no enemies in this room.\n" +
                                  "You can try moving to other rooms using direction commands\n\n");
                     }
@@ -275,7 +320,7 @@ public class Game {
                Vector<Actor> roomEnemy = map.get(player.getLoc()).getActor();
                if(Objects.nonNull(player.getThings().returnThisObject(obname))) {
                     Thing item = player.getThings().returnThisObject(obname);
-                    System.out.println(item.getName());
+                    System.out.println(item.getName() + " attack!\n");
                     newEnemyHealth = roomEnemy.get(0).getHealth() - item.getAttackThingEffect();
                     newPlayerHealth = player.getHealth() - roomEnemy.get(0).getAttackPower();
                     if (roomEnemy.get(0).getHealth() > 0) {
@@ -283,21 +328,29 @@ public class Game {
                               player.setHealth(newPlayerHealth);
                               roomEnemy.get(0).setHealth(newEnemyHealth);
                               newEnemyHealth = roomEnemy.get(0).getHealth();
-                              System.out.println(player.getName() + " health: " + newPlayerHealth);
+                              System.out.println(player.getName() + "health: " + newPlayerHealth);
                               System.out.println(roomEnemy.get(0).getName() + " health: " + newEnemyHealth);
                          } else if (newEnemyHealth <= 0 && newPlayerHealth > 0) {
                               System.out.println("\nYou defeated " + actorName + "\n");
                               player.setHealth(newPlayerHealth);
                               roomEnemy.get(0).setHealth(0);
-                              System.out.println(player.getName() + "your health is : " + player.getHealth());
-                              inventoryStatus();
-                              System.out.println("You can try moving to other rooms using direction commands");
+                              if(getLastActorHealth() <= 0) {
+                                   System.out.println("Congratulations " + player.getName() +
+                                           "You won the adventure Game!");
+                              }
+                              else {
+                                   System.out.println(player.getName() + "your health is : " + player.getHealth());
+                                   inventoryStatus();
+                                   System.out.println("\nYou can try moving to other rooms using direction commands");
+                              }
                          } else if (newEnemyHealth > 0 && newPlayerHealth <= 0) {
                               player.setHealth(0);
                               System.out.println("\nYou were defeated as your health dropped to 0");
                               getCurrentRoom().lossHelp();
                          } else {
-                              System.out.println("\nIt was a draw");
+                              player.setHealth(0);
+                              System.out.println("\nYou were defeated as your health dropped to 0");
+                              getCurrentRoom().lossHelp();
                          }
                     } else {
                          System.out.println("\nThere is no enemy to use " + item.getName() + " on.");
@@ -305,7 +358,8 @@ public class Game {
                } else {
                     System.out.println("\nYou can't use this item");
                }
-               if(player.getHealth() > 0) {
+               if(player.getHealth() > 0 && getLastActorHealth() > 0) {
+                    System.out.println();
                     availableCommands();
                }
           }

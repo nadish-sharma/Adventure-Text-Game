@@ -73,18 +73,16 @@ public class Parse {
     //Method to convert the input string to lower case and trim it
     //Calls wordList command to split the string into individual words
     // Calls parseCommand method to make sense of the word List
-    public static String runCommand(String inputStr) {
+    public static void runCommand(String inputStr) {
         List<String> wl;
-        String s = "ok";
         String lowStr = inputStr.trim().toLowerCase();
         if(!lowStr.equals("q")) {
             if(lowStr.equals("")) {
-                s = "you must enter a command";
+                System.out.println("you must enter a command");
             } else {
                 wl = wordList(lowStr);
                 parseCommand(wl);
             }
         }
-        return s;
     }
 }

@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="Added rooms for the game and usable items">
+    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="Parse class updated with extra commands, Room classes updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/dir.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Parse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Parse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Enemy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Items.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/MagicItem.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Thing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Thing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/WeaponItem.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +204,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668636838488</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Basic game created">
+      <created>1668642058118</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668642058118</updated>
+    </task>
+    <task id="LOCAL-00013" summary="redundant method userInput() in Game class removed">
+      <created>1668642340829</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668642340829</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Parse class updated with extra commands, Room classes updated">
+      <created>1668669423501</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1668669423501</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,7 +250,10 @@
     <MESSAGE value="items class defined, items are able to be added to rooms" />
     <MESSAGE value="update" />
     <MESSAGE value="Added rooms for the game and usable items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added rooms for the game and usable items" />
+    <MESSAGE value="Basic game created" />
+    <MESSAGE value="redundant method userInput() in Game class removed" />
+    <MESSAGE value="Parse class updated with extra commands, Room classes updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parse class updated with extra commands, Room classes updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -244,5 +264,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Game$gameobjects_Main.ic" NAME="gameobjects.Main Coverage Results" MODIFIED="1668675731200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>enums.*</FILTER>
+    </SUITE>
   </component>
 </project>
