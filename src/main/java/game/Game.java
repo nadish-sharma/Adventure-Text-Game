@@ -244,7 +244,7 @@ public class Game {
           fromlist.remove(t);
           tolist.add(t);
      }
-
+//
      public static void takeObject(String obname) {
           Thing t = getCurrentRoom().getThings().returnThisObject(obname);
 
