@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Adventure Text Game:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="removed dir enum, updated main and parse class. created new functions in Game class" />
+    <list default="true" id="30b4c390-d525-41e9-a04b-c2a2af880c24" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Adventure_Text_Game_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Parse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Parse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/CaveRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/CaveRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameobjects/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameobjects/Room.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +35,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="0d203e1d-4776-48e3-8faa-e86d664f8db0" />
+        <option name="url" value="https://github.com/nadish-sharma/Game.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,7 +67,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
@@ -68,7 +89,7 @@
   <component name="RunManager" selected="Application.gameobjects.Main">
     <configuration name="Map" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gameobjects.Map" />
-      <module name="Adventure Text Game" />
+      <module name="Adventure_Text_Game" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="enums.*" />
@@ -81,7 +102,7 @@
     </configuration>
     <configuration name="Parse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game.Parse" />
-      <module name="Adventure Text Game" />
+      <module name="Adventure_Text_Game" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="game.*" />
@@ -92,9 +113,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gameobjects.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="gameobjects.Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gameobjects.Main" />
-      <module name="Adventure Text Game" />
+      <module name="Adventure_Text_Game" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="enums.*" />
@@ -105,22 +126,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Adventure Text Game" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Adventure Text Game" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Adventure Text Game.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Adventure_Text_Game_jar/Adventure Text Game.jar" />
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.gameobjects.Main" />
+        <item itemvalue="JAR Application.Adventure Text Game.jar" />
         <item itemvalue="Application.Parse" />
       </list>
     </recent_temporary>
@@ -239,7 +251,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668681209171</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update">
+      <created>1668681378163</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668681378163</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update">
+      <created>1668683092165</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1668683092165</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update">
+      <created>1668686177589</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1668686177589</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,13 +295,13 @@
     <MESSAGE value="Added ThingHolder and ThingList class" />
     <MESSAGE value="Added items to each room. Created Thingholder, ThingList class" />
     <MESSAGE value="items class defined, items are able to be added to rooms" />
-    <MESSAGE value="update" />
     <MESSAGE value="Added rooms for the game and usable items" />
     <MESSAGE value="Basic game created" />
     <MESSAGE value="redundant method userInput() in Game class removed" />
     <MESSAGE value="Parse class updated with extra commands, Room classes updated" />
     <MESSAGE value="removed dir enum, updated main and parse class. created new functions in Game class" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed dir enum, updated main and parse class. created new functions in Game class" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

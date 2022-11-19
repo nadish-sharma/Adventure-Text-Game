@@ -21,7 +21,6 @@ public class CaveRoom extends Room{
                 "\n\n" + enemy.get(0).description;
     }
     public void lossHelp() {
-        System.out.println("Fang is a powerful weapon, maybe you should have taken it. " +
-                "Never miss any item in ANY room. Better luck next time");
+        System.out.println("Fang is a powerful weapon, maybe you should have taken it. Never miss any item in ANY room. Better luck next time");
     }
 }

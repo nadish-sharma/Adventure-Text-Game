@@ -61,7 +61,6 @@ public class Parse {
                         Game.goE();
                         break;
                     case "use":
-                        useObject(noun);
                         break;
                     case "retreat":
                         Game.movePlayer(getCurrentRoom().getPreviousRoom());

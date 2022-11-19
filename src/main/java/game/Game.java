@@ -27,16 +27,8 @@ public class Game {
           // create a game with rooms, items, and enemies added to the map
           createGame();
           // initially player's inventory is empty
-          player = new Actor("Nadish", "A description of player", ROOM0, new ThingList(), 100, 15, 5);
+          player = new Actor("Nadish", "A description of player", ROOM0, new ThingList(), 100, 5);
           startGame();
-     }
-     private static void clearWholeScreen() {
-          System.out.print("\u000C"); //clears the screen
-          System.out.flush(); //moves the cursor to top left
-     }
-     private void clearScreenAfterCursor() {
-          System.out.print("\033[2J");
-          System.out.flush();
      }
 
      private void createGame() {
@@ -129,13 +121,9 @@ public class Game {
           System.out.println("> ");
           name = in.readLine();
           player.setName(name);
-          clearWholeScreen();
           System.out.println("You start the game at " + map.get(player.getLoc()).getName());
           look();
           availableCommands();
-     }
-     public void retreat() {
-
      }
 
      public static void availableCommands() {
@@ -244,7 +232,7 @@ public class Game {
           fromlist.remove(t);
           tolist.add(t);
      }
-
+//
      public static void takeObject(String obname) {
           Thing t = getCurrentRoom().getThings().returnThisObject(obname);
 
@@ -336,7 +324,7 @@ public class Game {
                               roomEnemy.get(0).setHealth(0);
                               if(getLastActorHealth() <= 0) {
                                    System.out.println("Congratulations " + player.getName() +
-                                           "You won the adventure Game!");
+                                           " You won the adventure Game!");
                               }
                               else {
                                    System.out.println(player.getName() + "your health is : " + player.getHealth());

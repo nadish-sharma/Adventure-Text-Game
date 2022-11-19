@@ -11,10 +11,6 @@ public class AsceticRoom extends Room {
         super(nm, descr, north, south, west, east, tl, prevRoom);
         this.enemy = enemy;
     }
-
-    public AsceticRoom(String nm, String descr, rl north, rl south, rl west, rl east, boolean tak, ThingList tl, Vector<Actor> enemy) {
-        super(nm, descr, north, south, west, east, tak, tl, enemy);
-    }
     public Vector<Actor> getActor() {
 
         return enemy;

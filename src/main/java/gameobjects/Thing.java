@@ -11,16 +11,8 @@ public class Thing {
         return attackThingEffect;
     }
 
-    public void setAttackThingEffect(int attackThingEffect) {
-        this.attackThingEffect = attackThingEffect;
-    }
-
     public int gethealthThingEffect() {
         return healthThingEffect;
-    }
-
-    public void sethealthThingEffect(int healthThingEffect) {
-        this.healthThingEffect = healthThingEffect;
     }
 
     public Thing(String nm, String descr, int healthThingEffect, int attackThingEffect) {
@@ -30,6 +22,7 @@ public class Thing {
         this.healthThingEffect = healthThingEffect;
         this.attackThingEffect = attackThingEffect;
     };
+
     public Thing(String nm, String descr) {
         name = nm;
         description = descr;
@@ -49,13 +42,5 @@ public class Thing {
    public String getDescription() {
         return description;
     }
-
-  /* public void setName(String nm) {
-        name = nm;
-    } *//*
-   public void setDescription(String descr) {
-        description = descr;
-    }
-    */
 
 }
