@@ -303,6 +303,7 @@ public class Game {
      static void useObject(String obname) {
           int newPlayerHealth;
           int newEnemyHealth;
+          System.out.println("jknd");
           if (Objects.nonNull(getCurrentActor())) {
                String actorName = getCurrentActor().getName();
                Vector<Actor> roomEnemy = map.get(player.getLoc()).getActor();
@@ -354,6 +355,7 @@ public class Game {
           else {
                System.out.println("You cannot use health item, its effect applies to player automatically when you take it." +
                        " If you drop the health item then its effect will go away");
+               availableCommands();
           }
      }
 }
