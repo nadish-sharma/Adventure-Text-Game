@@ -36,3 +36,9 @@ Welcome to this Adventure Game where you can find many monsters to defeat using 
 * In case you forgot to take an item in previous room, use retreat command.
 
 <img width="600" alt="retreat" src="https://user-images.githubusercontent.com/99782175/203871874-ede0eff0-3e9b-4617-a470-fc9adbd706ef.png">
+
+* If you enter an unknown command, an error message will display.
+* The commands are not case-sensitive, so you can enter take Sword, Take sword, Take Sword, take sword.
+
+<img width="350" alt="case insensitive" src="https://user-images.githubusercontent.com/99782175/203872904-40e30f13-be62-474b-9cbb-953305372a64.png">
+
