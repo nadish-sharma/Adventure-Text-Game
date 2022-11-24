@@ -1,6 +1,7 @@
 # Adventure-Text-Game
 
-Welcome to this Adventure Game where you can find many monsters to defeat using cool attack items and essential health items to keep your health up.
+Welcome to this Adventure Game where you can find many monsters to defeat using cool attack items and essential health items to keep your health up. Defeat the monsters in all rooms until you defeat the final boss: Buu the Bubblegum King.
+
 You start the game by entering a player name. Then you find yourself in Dungean room.
 In each room you can find items, like attack item sword in Dungean with it's description. Use in game commands to interact with game objects.
 
@@ -20,5 +21,13 @@ Use take command to take health and attack items.
 <img width="661" alt="4 - go S and take potion" src="https://user-images.githubusercontent.com/99782175/203871251-98becc27-4fb1-454c-85b5-e80c54245b52.png">
 
 You can drop in-game items too.
+
 <img width="574" alt="5 - drop sword" src="https://user-images.githubusercontent.com/99782175/203871431-269445df-6a92-4853-9c71-f35aa8ece9c9.png">
 
+If you try to take an item which is not present, you will not be allowed to.
+
+<img width="558" alt="6 - take banana" src="https://user-images.githubusercontent.com/99782175/203871629-56cd4941-5001-49fe-80ad-d42d86bde26d.png">
+
+In case you forgot to take an item in previous room, use retreat command.
+
+<img width="600" alt="retreat" src="https://user-images.githubusercontent.com/99782175/203871874-ede0eff0-3e9b-4617-a470-fc9adbd706ef.png">
