@@ -40,5 +40,5 @@ Welcome to this Adventure Game where you can find many monsters to defeat using 
 * If you enter an unknown command, an error message will display.
 * The commands are not case-sensitive, so you can enter take Sword, Take sword, Take Sword, take sword.
 
-<img width="350" alt="case insensitive" src="https://user-images.githubusercontent.com/99782175/203872904-40e30f13-be62-474b-9cbb-953305372a64.png">
+<img width="323" alt="case insen" src="https://user-images.githubusercontent.com/99782175/203873051-451c6cc3-2553-46a8-9e03-acea324098c5.png">
 
